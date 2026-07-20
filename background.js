@@ -66,6 +66,6 @@ chrome.tabs.onCreated.addListener(async (tab) => {
     await chrome.tabs.move(tab.id, { index: targetIndex });
   } catch (error) {
     // The tab may have been closed or moved to another window meanwhile.
-    console.debug("Tab Position: tab could not be moved.", error);
+    console.debug("tab-position: tab could not be moved.", error);
   }
 });
