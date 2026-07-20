@@ -2,7 +2,7 @@
 
 Chrome で新しく開くタブの位置を変更する Manifest V3 拡張機能
 
-コードは Codex を使用して作成した
+コードは Codex を使用して作成
 
 ## Chrome に読み込む
 
