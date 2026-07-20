@@ -12,59 +12,18 @@
 }
 
 body {
-  width: 360px;
   margin: 0;
+  min-width: 320px;
 }
 
 main {
+  width: min(100% - 32px, 440px);
+  margin: 40px auto;
   padding: 22px;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  margin-bottom: 20px;
-}
-
-.logo {
-  display: flex;
-  align-items: flex-end;
-  gap: 3px;
-  width: 42px;
-  height: 42px;
-  padding: 9px 7px;
-  border-radius: 12px;
-  background: linear-gradient(145deg, #5b6df8, #7c4dff);
-  box-shadow: 0 6px 16px rgb(91 109 248 / 25%);
-}
-
-.logo span {
-  flex: 1;
-  height: 18px;
-  border-radius: 3px 3px 1px 1px;
-  background: rgb(255 255 255 / 55%);
-}
-
-.logo span:first-child {
-  height: 24px;
+  border: 1px solid #e1e4eb;
+  border-radius: 16px;
   background: white;
-}
-
-.logo span:last-child {
-  height: 13px;
-}
-
-h1 {
-  margin: 0;
-  font-size: 17px;
-  letter-spacing: -0.01em;
-}
-
-header p {
-  margin: 3px 0 0;
-  color: #70757f;
-  font-size: 12px;
+  box-shadow: 0 10px 30px rgb(50 60 120 / 8%);
 }
 
 form {
@@ -80,9 +39,9 @@ form {
   gap: 12px;
   min-height: 66px;
   padding: 10px 13px;
-  border: 1px solid #e1e4eb;
+  border: 1px solid #e5e7ed;
   border-radius: 13px;
-  background: white;
+  background: #fafbfc;
   cursor: pointer;
   transition:
     border-color 150ms ease,
