@@ -16,12 +16,16 @@ async function rememberCurrentActiveTabs() {
   }
 }
 
-chrome.runtime.onInstalled.addListener(async () => {
+chrome.runtime.onInstalled.addListener(async ({ reason }) => {
   const { tabPosition } = await chrome.storage.sync.get("tabPosition");
   if (!tabPosition) {
     await chrome.storage.sync.set({ tabPosition: DEFAULT_POSITION });
   }
   await rememberCurrentActiveTabs();
+
+  if (reason === "install") {
+    await chrome.runtime.openOptionsPage();
+  }
 });
 
 chrome.runtime.onStartup.addListener(rememberCurrentActiveTabs);
