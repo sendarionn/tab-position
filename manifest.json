@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Position",
+  "version": "1.0.0",
+  "description": "新しく開いたタブの位置を、左端・右端・現在のタブの隣から選べます。",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "タブを開く位置",
+    "default_popup": "popup.html"
+  }
+}
